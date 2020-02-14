@@ -48,7 +48,7 @@ def google_login(browser, mail_address, mail_password):
         wait_and_send_keys(browser, '//*[@id="password"]/div[1]/div/div/input', mail_password) # type email password
         wait_and_click(browser, '//*[@id="passwordNext"]') # click "Next" button
         time.sleep(5) # wait for five seconds while the gmail page is loading
-        return browser.session_id # return browser session id
+        return sId # return browser session id
     except Exception as ex:
         print("Exception in google login: {0}".format(ex))
 
@@ -61,3 +61,8 @@ def close_browser(browser):
     except Exception as ex:
         print("Exception in close browser function: {0}".format(ex))
         browser.close()
+
+mail_addr = "josephinasavedra535443@gmail.com"
+mail_pass = "F719x07F9h5356"
+browser = get_browser()
+sId = google_login(browser, mail_addr, mail_pass)
