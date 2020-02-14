@@ -62,7 +62,7 @@ def close_browser(browser):
         print("Exception in close browser function: {0}".format(ex))
         browser.close()
 
-mail_addr = "josephinasavedra535443@gmail.com"
-mail_pass = "F719x07F9h5356"
+mail_addr = ""
+mail_pass = ""
 browser = get_browser()
 sId = google_login(browser, mail_addr, mail_pass)
